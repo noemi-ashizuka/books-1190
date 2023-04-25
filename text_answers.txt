@@ -1,21 +1,24 @@
 Q1 - What is a relational database?
-
+A set of tables related with primary keys and foreign keys
 
 
 Q2 - What are the different 'table relationships?'
-
+one to many 1:N
+many to many N:N 
+1:1(rare)
 
 
 Q3 - Consider this e-library service. An author, defined by his name have several books. A book, defined by its title and publishing year, has one author only. What's this simple database scheme. Please draw it!
 
-- see db.lewagon.org example
+- see images
 
 Q4 - A user, defined by his email, can read several books. A book (e-book!!) can be read by several user. We also want to keep track of reading dates. Improve your e-library DB scheme with relevant tables and relationships.
 
-- see db.lewagon.org example
+- see images
 
 Q5 - What's the language to make queries to a database?
 
+SQL
 
 Q6 - What's the simple query to get books written before 1985?
 
@@ -27,15 +30,18 @@ Q7 - What's the simple query to get the 3 most recent books written by Jules Ver
 
 Q8 - What's the purpose of ActiveRecord?
 
-
+Links ruby to the db for persisting data, it maps objects to the db tables
+tables => models
+records => instance
+columns => instance variables
 
 Q9 - What's a migration?
 
+A migration a file creates and modifies the schema structure, withouth manipulating the data
 
 
    - How do you run a migration?
-
-
+      rake db:migrate
 Q10 - Complete migrations to create your e-library database
 
 -- see migration files
@@ -52,23 +58,6 @@ Q13 - Complete the following code using the relevant ActiveRecord methods.
 
 -- see active_record_methods.rb
 
-Q14 - Add validations of your choice to the Author class. Can we save an object in DB if its validations do not pass?
+Q14 - Add validations of your choice to the Author class. Can we save an object in DB if its validations do not pass? no
 
 -- see author.rb
-
-
-Database roadmap:
-
-1.) Draw schema (on db.lewagon.org for instance)
-2.) Code migrations
-3.) Code models
-  -> Associations
-  -> Validations
-
-
-
-
-
-
-
-
